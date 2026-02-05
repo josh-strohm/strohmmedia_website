@@ -171,7 +171,7 @@ export default function PlatformPage() {
                             </div>
 
                             <img
-                                src="/platform-screenshot.png"
+                                src="/latest_platform_screenshot.png"
                                 alt="Strohm Media Platform Interface"
                                 className="h-auto w-full object-cover"
                             />
