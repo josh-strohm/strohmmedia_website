@@ -40,10 +40,10 @@ export default function AboutPage() {
                             <span className="text-primary">About Us</span>
                         </motion.span>
                         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={heroInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.1 }} className="mb-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-                            Bridging <span className="text-gradient">Human Creativity</span> and AI Efficiency
+                            Intelligent AI Meets <span className="text-gradient">Integrated Marketing</span>
                         </motion.h1>
                         <motion.p initial={{ opacity: 0, y: 30 }} animate={heroInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 }} className="mx-auto max-w-2xl text-lg text-muted-foreground md:text-xl">
-                            We believe the future of marketing lies at the intersection of human insight and artificial intelligence.
+                            We don&apos;t just provide tools; we deploy comprehensive marketing ecosystems that leverage artificial intelligence to manage your entire business growth.
                         </motion.p>
                     </div>
                 </div>
@@ -66,10 +66,11 @@ export default function AboutPage() {
                 <div className="container mx-auto px-6">
                     <motion.div initial={{ opacity: 0, x: -50 }} animate={storyInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6 }} className="mx-auto max-w-3xl">
                         <span className="mb-4 inline-block text-sm font-medium uppercase tracking-wider text-primary">Our Story</span>
-                        <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">Born from a <span className="text-gradient">Simple Frustration</span></h2>
-                        <div className="space-y-4 text-muted-foreground">
-                            <p>Strohm Media was founded with a clear vision: to eliminate the gap between what AI technology can do and what most businesses actually experience.</p>
-                            <p>We watched countless companies struggle with disconnected tools and manual processes. We decided to bridge that gap with intelligent automation that delivers results.</p>
+                        <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">Beyond One-Off <span className="text-gradient">Solutions</span></h2>
+                        <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
+                            <p>Strohm Media was founded with a singular realization: most businesses don&apos;t need more disconnected tools; they need a unified engine that runs autonomously.</p>
+                            <p>We saw companies struggling with fragmented data and manual handoffs between CRM, marketing, and sales. We decided to bridge that gap by combining our proprietary AI workforce with a powerful, all-in-one marketing command center.</p>
+                            <p>Today, we offer more than just automation. We provide a complete ecosystem where your funnels, communication, reputation, and lead nurturing are all handled in a single intelligent environment, supercharged by AI that learns and adapts to your specific market.</p>
                         </div>
                     </motion.div>
                 </div>
@@ -80,8 +81,9 @@ export default function AboutPage() {
                 <div className="container mx-auto px-6">
                     <div className="mx-auto mb-16 max-w-3xl text-center">
                         <motion.h2 initial={{ opacity: 0, y: 20 }} animate={valuesInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }} className="text-3xl font-bold tracking-tight md:text-4xl">
-                            What Drives <span className="text-gradient">Everything We Do</span>
+                            The Foundations of <span className="text-gradient">Our Approach</span>
                         </motion.h2>
+                        <p className="mt-4 text-muted-foreground">Our methodology is built on bringing order to the chaos of modern digital growth.</p>
                     </div>
                     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                         {values.map((value, index) => (
@@ -100,12 +102,12 @@ export default function AboutPage() {
             <section className="relative py-24">
                 <div className="container mx-auto px-6">
                     <div className="glass rounded-3xl p-12 text-center md:p-20">
-                        <h2 className="mb-6 text-3xl font-bold md:text-4xl">Ready to Work Together?</h2>
-                        <p className="mx-auto mb-10 max-w-xl text-muted-foreground">Let&apos;s discuss how we can help transform your marketing with AI.</p>
+                        <h2 className="mb-6 text-3xl font-bold md:text-4xl">Ready to Unify Your Growth?</h2>
+                        <p className="mx-auto mb-10 max-w-xl text-muted-foreground">Let&apos;s discuss how our integrated platform and AI workforce can transform your business operations.</p>
                         <MagneticButton>
                             <Link href="/contact">
                                 <Button size="lg" className="shimmer group h-14 bg-gradient-to-r from-primary to-accent px-8 text-lg font-semibold">
-                                    Get in Touch
+                                    Start Your Transformation
                                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                                 </Button>
                             </Link>
