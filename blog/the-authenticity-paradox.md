@@ -2,7 +2,7 @@
 title: "The Authenticity Paradox: Why AI Requires More Humanity, Not Less"
 date: 2026-02-01T22:15:00-05:00
 featuredImage: "/images/blog/human-connection-ai.jpeg"
-category: Strategy
+category: Authenticity
 tags: ["Authenticity", "AI Strategy", "Brand Voice", "Future of Work"]
 excerpt: "In an era flooded with automated content, the most valuable asset you have isn't your tech stack—it's your story. We explore the 'Authenticity Paradox' and why the smartest brands are using AI to double down on being human."
 featured: true

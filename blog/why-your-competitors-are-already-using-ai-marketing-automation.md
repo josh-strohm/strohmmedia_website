@@ -2,7 +2,7 @@
 title: "You're Working Harder. They're Working Smarter."
 date: 2026-02-05T09:00:00-05:00
 featuredImage: "/images/blog/ai-automation-advantage.jpeg"
-category: Strategy
+category: Marketing
 tags: ["AI Automation", "Marketing Strategy", "Competitive Advantage", "Business Growth"]
 excerpt: "You're working harder than ever while your competitors seem to be doing more with less effort. The secret? They've already embraced AI marketing automation. Here's exactly what you're missing out on—and how to catch up."
 featured: true
