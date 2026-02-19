@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { Navigation } from "@/components/navigation";
-import { Footer } from "@/components/footer";
 import { MouseGlow } from "@/components/mouse-glow";
 import { ChatWidget } from "@/components/chat-widget";
 
@@ -81,11 +79,7 @@ export default function RootLayout({
         className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
         <MouseGlow />
-        <Navigation />
-        <main className="relative min-h-screen">
-          {children}
-        </main>
-        <Footer />
+        {children}
         <ChatWidget />
       </body>
     </html>
