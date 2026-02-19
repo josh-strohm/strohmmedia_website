@@ -66,12 +66,12 @@ export default function BuildMyWebsitePage() {
                 <div className="container mx-auto px-6">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center">
-                            <div className="relative h-[60px] w-[240px] overflow-hidden">
+                            <div className="relative h-[120px] w-[480px] overflow-hidden">
                                 <Image
                                     src="/Strohm_Media_Logo-no-bg.jpeg"
                                     alt="Strohm Media"
-                                    width={240}
-                                    height={60}
+                                    width={480}
+                                    height={120}
                                     className="h-full w-full object-contain"
                                     priority
                                 />
