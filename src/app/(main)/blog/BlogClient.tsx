@@ -46,8 +46,6 @@ export function BlogClient({ cmsPosts }: { cmsPosts: BlogPostType[] }) {
         }
     };
 
-    const regularPosts = cmsPosts.filter((post) => !post.featured);
-
     return (
         <>
             {/* Hero */}
@@ -86,15 +84,22 @@ export function BlogClient({ cmsPosts }: { cmsPosts: BlogPostType[] }) {
                 </div>
             </section>
 
-            {/* Featured Posts */}
+            {/* Featured Posts - 4 cards grid */}
             <section ref={ref} className="relative py-12">
                 <div className="container mx-auto px-6">
-                    <div className="mb-8">
+                    <div className="mb-8 flex items-center justify-between">
                         <h2 className="text-2xl font-bold">Featured</h2>
+                        <Link
+                            href="/articles"
+                            className="inline-flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-primary/80"
+                        >
+                            View All Articles
+                            <ArrowRight className="h-4 w-4" />
+                        </Link>
                     </div>
 
-                    <div className="grid gap-6 md:grid-cols-2">
-                        {featuredPosts.map((post, index) => (
+                    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                        {featuredPosts.slice(0, 4).map((post, index) => (
                             <motion.article
                                 key={post.slug}
                                 initial={{ opacity: 0, y: 30 }}
@@ -103,23 +108,11 @@ export function BlogClient({ cmsPosts }: { cmsPosts: BlogPostType[] }) {
                             >
                                 <Link href={`/blog/${post.slug}`}>
                                     <div
-                                        className={`group relative overflow-hidden rounded-3xl bg-gradient-to-br ${categoryGradients[post.category] || "from-blue-500/20 to-cyan-500/10"} p-8 transition-all hover:scale-[1.02]`}
+                                        className={`group relative overflow-hidden rounded-2xl bg-gradient-to-br ${categoryGradients[post.category] || "from-blue-500/20 to-cyan-500/10"} p-5 transition-all hover:scale-[1.02]`}
                                     >
-                                        {/* Grid pattern */}
-                                        <div
-                                            className="absolute inset-0"
-                                            style={{
-                                                backgroundImage: `
-                          linear-gradient(to right, oklch(1 0 0 / 0.03) 1px, transparent 1px),
-                          linear-gradient(to bottom, oklch(1 0 0 / 0.03) 1px, transparent 1px)
-                        `,
-                                                backgroundSize: "30px 30px",
-                                            }}
-                                        />
-
                                         <div className="relative">
                                             {post.featuredImage && (
-                                                <div className="mb-6 aspect-video overflow-hidden rounded-2xl border border-white/10">
+                                                <div className="mb-4 aspect-video overflow-hidden rounded-xl border border-white/10">
                                                     <img
                                                         src={post.featuredImage}
                                                         alt={post.title}
@@ -127,56 +120,34 @@ export function BlogClient({ cmsPosts }: { cmsPosts: BlogPostType[] }) {
                                                     />
                                                 </div>
                                             )}
-                                            <div className="mb-4 flex items-center gap-3">
-                                                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-sm backdrop-blur-sm">
+                                            <div className="mb-3 flex items-center gap-2">
+                                                <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-2 py-0.5 text-xs backdrop-blur-sm">
                                                     {(() => {
                                                         const Icon = categoryIcons[post.category] || FileText;
-                                                        return <Icon className="h-3.5 w-3.5" />;
+                                                        return <Icon className="h-3 w-3" />;
                                                     })()}
                                                     {post.category}
                                                 </span>
-                                                <span className="text-sm text-muted-foreground">
-                                                    {post.date}
-                                                </span>
                                             </div>
 
-                                            <h3 className="mb-4 text-2xl font-bold transition-colors group-hover:text-primary md:text-3xl">
+                                            <h3 className="mb-3 text-lg font-bold transition-colors group-hover:text-primary line-clamp-2">
                                                 {post.title}
                                             </h3>
 
-                                            <p className="mb-6 text-muted-foreground">
-                                                {post.excerpt}
-                                            </p>
-
                                             <div className="flex items-center justify-between">
-                                                <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
-                                                    <Clock className="h-4 w-4" />
+                                                <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                                                    <Clock className="h-3.5 w-3.5" />
                                                     {post.readTime}
                                                 </span>
-                                                <span className="inline-flex items-center gap-1 font-medium text-primary transition-transform group-hover:translate-x-1">
-                                                    Read More
-                                                    <ArrowRight className="h-4 w-4" />
+                                                <span className="inline-flex items-center gap-1 text-xs font-medium text-primary">
+                                                    Read
+                                                    <ArrowRight className="h-3 w-3" />
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
                                 </Link>
                             </motion.article>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* All Posts */}
-            <section className="relative py-12 pb-24">
-                <div className="container mx-auto px-6">
-                    <div className="mb-8">
-                        <h2 className="text-2xl font-bold">All Articles</h2>
-                    </div>
-
-                    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                        {regularPosts.map((post, index) => (
-                            <BlogCard key={post.slug} post={post} index={index} />
                         ))}
                     </div>
                 </div>
