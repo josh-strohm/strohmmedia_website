@@ -2,17 +2,8 @@
 
 import { Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
-import { useEffect, useRef } from "react";
 
 export default function ContactPage() {
-    const iframeRef = useRef<HTMLIFrameElement>(null);
-
-    useEffect(() => {
-        if (iframeRef.current) {
-            iframeRef.current.setAttribute("data-layout", '{"id":"INLINE"}');
-        }
-    }, []);
-
     return (
         <>
             <section className="relative min-h-screen overflow-hidden pt-32 pb-20">
@@ -32,29 +23,20 @@ export default function ContactPage() {
                     </div>
 
                     <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="mx-auto max-w-xl">
-                        <div className="glass rounded-3xl p-8 md:p-12" style={{ minHeight: "728px" }}>
+                        <div className="glass rounded-3xl p-8 md:p-12">
+                            {/* Google Calendar Appointment Scheduling */}
                             <iframe
-                                ref={iframeRef}
-                                src="https://links.strohmmedia.com/widget/form/rluipHJAPnEj1XNCVD4k"
-                                style={{ width: "100%", height: "100%", border: "none", borderRadius: "3px", minHeight: "600px" }}
-                                id="inline-rluipHJAPnEj1XNCVD4k"
-                                data-trigger-type="alwaysShow"
-                                data-trigger-value=""
-                                data-activation-type="alwaysActivated"
-                                data-activation-value=""
-                                data-deactivation-type="neverDeactivate"
-                                data-deactivation-value=""
-                                data-form-name="Website Form"
-                                data-height="728"
-                                data-layout-iframe-id="inline-rluipHJAPnEj1XNCVD4k"
-                                data-form-id="rluipHJAPnEj1XNCVD4k"
-                                title="Website Form"
+                                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ25F2oblKxh3C1mJNDUoiugL0QZQITgGdVZawhkNuqHdrIYiD0a0euuHv_cS0izBqcQXQlpFgqS?gv=true"
+                                style={{ border: 0, width: "100%", minHeight: "600px" }}
+                                width="100%"
+                                height="600"
+                                frameBorder={0}
+                                title="Book an Appointment"
                             />
                         </div>
                     </motion.div>
                 </div>
             </section>
-            <script src="https://links.strohmmedia.com/js/form_embed.js" defer />
         </>
     );
 }
