@@ -1,26 +1,9 @@
 "use client";
 
-import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Sparkles, Calendar } from "lucide-react";
 
 export default function BookingPage() {
-    useEffect(() => {
-        // Load the form embed script
-        const script = document.createElement("script");
-        script.src = "https://links.strohmmedia.com/js/form_embed.js";
-        script.type = "text/javascript";
-        script.async = true;
-        document.body.appendChild(script);
-
-        return () => {
-            // Cleanup script on unmount
-            if (document.body.contains(script)) {
-                document.body.removeChild(script);
-            }
-        };
-    }, []);
-
     return (
         <>
             <section className="relative min-h-screen overflow-hidden pt-32 pb-20">
@@ -49,7 +32,7 @@ export default function BookingPage() {
                             transition={{ delay: 0.2 }}
                             className="text-lg text-muted-foreground"
                         >
-                            Select a time that works best for you and let's discuss how we can transform your business.
+                            Select a time that works best for you and let&apos;s discuss how we can transform your business.
                         </motion.p>
                     </div>
 
@@ -65,16 +48,15 @@ export default function BookingPage() {
                                 <h2 className="text-2xl font-semibold">Choose Your Time Slot</h2>
                             </div>
 
-                            {/* Embedded Calendar Scheduler */}
-                            <div className="calendar-embed-container">
-                                <iframe
-                                    src="https://links.strohmmedia.com/widget/booking/alSsKBFLEHV6NVAtfDew"
-                                    style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '600px' }}
-                                    scrolling="no"
-                                    id="alSsKBFLEHV6NVAtfDew_1770266136523"
-                                    title="Booking Calendar"
-                                />
-                            </div>
+                            {/* Google Calendar Appointment Scheduling */}
+                            <iframe
+                                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ25F2oblKxh3C1mJNDUoiugL0QZQITgGdVZawhkNuqHdrIYiD0a0euuHv_cS0izBqcQXQlpFgqS?gv=true"
+                                style={{ border: 0, width: "100%", minHeight: "600px" }}
+                                width="100%"
+                                height="600"
+                                frameBorder={0}
+                                title="Book an Appointment"
+                            />
                         </div>
                     </motion.div>
                 </div>

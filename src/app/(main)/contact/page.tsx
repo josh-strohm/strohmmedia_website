@@ -2,8 +2,23 @@
 
 import { Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 export default function ContactPage() {
+    useEffect(() => {
+        // Load the Less Annoying CRM embed script
+        const script = document.createElement("script");
+        script.src = "https://embed.lessannoyingcrm.com/embed.js";
+        script.async = true;
+        document.body.appendChild(script);
+
+        return () => {
+            if (document.body.contains(script)) {
+                document.body.removeChild(script);
+            }
+        };
+    }, []);
+
     return (
         <>
             <section className="relative min-h-screen overflow-hidden pt-32 pb-20">
@@ -24,15 +39,16 @@ export default function ContactPage() {
 
                     <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="mx-auto max-w-xl">
                         <div className="glass rounded-3xl p-8 md:p-12">
-                            {/* Google Calendar Appointment Scheduling */}
-                            <iframe
-                                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ25F2oblKxh3C1mJNDUoiugL0QZQITgGdVZawhkNuqHdrIYiD0a0euuHv_cS0izBqcQXQlpFgqS?gv=true"
-                                style={{ border: 0, width: "100%", minHeight: "600px" }}
-                                width="100%"
-                                height="600"
-                                frameBorder={0}
-                                title="Book an Appointment"
-                            />
+                            {/* Less Annoying CRM Form Embed */}
+                            <blockquote
+                                className="lacrm-embed"
+                                data-embed-height="650"
+                                data-embed-show-header="false"
+                            >
+                                <a href="https://forms.lessannoyingcrm.com/view/4091407883495370210234441381371">
+                                    Get Your Free Consultation
+                                </a>
+                            </blockquote>
                         </div>
                     </motion.div>
                 </div>
