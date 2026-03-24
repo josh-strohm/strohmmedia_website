@@ -49,14 +49,16 @@ export default function BookingPage() {
                             </div>
 
                             {/* Google Calendar Appointment Scheduling */}
-                            <iframe
-                                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ25F2oblKxh3C1mJNDUoiugL0QZQITgGdVZawhkNuqHdrIYiD0a0euuHv_cS0izBqcQXQlpFgqS?gv=true"
-                                style={{ border: 0, width: "100%", minHeight: "600px" }}
-                                width="100%"
-                                height="600"
-                                frameBorder={0}
-                                title="Book an Appointment"
-                            />
+                            <div style={{ background: "#ffffff", borderRadius: "12px", overflow: "hidden", padding: "8px" }}>
+                                <iframe
+                                    src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ25F2oblKxh3C1mJNDUoiugL0QZQITgGdVZawhkNuqHdrIYiD0a0euuHv_cS0izBqcQXQlpFgqS?gv=true"
+                                    style={{ border: 0, width: "100%", minHeight: "600px", display: "block" }}
+                                    width="100%"
+                                    height="600"
+                                    frameBorder={0}
+                                    title="Book an Appointment"
+                                />
+                            </div>
                         </div>
                     </motion.div>
                 </div>

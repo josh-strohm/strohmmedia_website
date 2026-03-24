@@ -27,18 +27,21 @@ export default function ContactPage() {
                     <div className="mx-auto max-w-2xl text-center mb-12">
                         <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm">
                             <Sparkles className="h-4 w-4 text-primary" />
-                            <span className="text-primary">Strohm Interface</span>
+                            <span className="text-primary">Free Consultation</span>
                         </motion.span>
                         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="mb-6 text-4xl font-bold md:text-5xl">
-                            Initialize <span className="text-gradient">Growth Sequence</span>
+                            Let&apos;s <span className="text-gradient">Work Together</span>
                         </motion.h1>
                         <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg text-muted-foreground">
-                            Configure your parameters and deploy our AI intelligence layer to your business.
+                            Tell us about your business and we&apos;ll show you exactly how our AI-powered solutions can help you grow.
                         </motion.p>
                     </div>
 
                     <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="mx-auto max-w-xl">
                         <div className="glass rounded-3xl p-8 md:p-12">
+                            <p className="text-center text-muted-foreground mb-6 text-sm">
+                                Fill out the form below and a member of our team will be in touch within one business day.
+                            </p>
                             {/* Less Annoying CRM Form Embed */}
                             <blockquote
                                 className="lacrm-embed"
