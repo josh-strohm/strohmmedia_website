@@ -28,11 +28,20 @@ export const metadata: Metadata = {
     siteName: "Strohm Media",
     title: "Strohm Media | AI-Driven Marketing Automation",
     description: "Scale your influence with AI-driven precision. We automate the mundane so you can dominate the market.",
+    images: [
+      {
+        url: "/Strohm_Media_Logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Strohm Media",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Strohm Media | AI-Driven Marketing Automation",
     description: "Scale your influence with AI-driven precision. We automate the mundane so you can dominate the market.",
+    images: ["/Strohm_Media_Logo.jpg"],
   },
   robots: {
     index: true,
