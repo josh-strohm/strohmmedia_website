@@ -18,8 +18,16 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Strohm Media | AI-Driven Marketing Automation",
-  description: "Scale your influence with AI-driven precision. Strohm Media bridges the gap between emerging AI technologies and business growth. We automate the mundane so you can dominate the market.",
-  keywords: ["AI Marketing", "Marketing Automation", "Digital Strategy", "Performance Marketing", "AI Automation", "Business Growth"],
+  description:
+    "Scale your influence with AI-driven precision. Strohm Media bridges the gap between emerging AI technologies and business growth. We automate the mundane so you can dominate the market.",
+  keywords: [
+    "AI Marketing",
+    "Marketing Automation",
+    "Digital Strategy",
+    "Performance Marketing",
+    "AI Automation",
+    "Business Growth",
+  ],
   authors: [{ name: "Strohm Media" }],
   openGraph: {
     type: "website",
@@ -27,10 +35,11 @@ export const metadata: Metadata = {
     url: "https://strohmmedia.com",
     siteName: "Strohm Media",
     title: "Strohm Media | AI-Driven Marketing Automation",
-    description: "Scale your influence with AI-driven precision. We automate the mundane so you can dominate the market.",
+    description:
+      "Scale your influence with AI-driven precision. We automate the mundane so you can dominate the market.",
     images: [
       {
-        url: "/Strohm_Media_Logo.jpg",
+        url: "https://strohmmedia.com/Strohm_Media_Logo.jpg",
         width: 1200,
         height: 630,
         alt: "Strohm Media",
@@ -40,8 +49,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Strohm Media | AI-Driven Marketing Automation",
-    description: "Scale your influence with AI-driven precision. We automate the mundane so you can dominate the market.",
-    images: ["/Strohm_Media_Logo.jpg"],
+    description:
+      "Scale your influence with AI-driven precision. We automate the mundane so you can dominate the market.",
+    images: ["https://strohmmedia.com/Strohm_Media_Logo.jpg"],
   },
   robots: {
     index: true,
@@ -67,20 +77,21 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              "name": "Strohm Media",
-              "applicationCategory": "BusinessApplication",
-              "operatingSystem": "Web",
-              "description": "AI-driven marketing automation platform that bridges the gap between emerging AI technologies and business growth.",
-              "offers": {
+              name: "Strohm Media",
+              applicationCategory: "BusinessApplication",
+              operatingSystem: "Web",
+              description:
+                "AI-driven marketing automation platform that bridges the gap between emerging AI technologies and business growth.",
+              offers: {
                 "@type": "Offer",
-                "category": "Marketing Automation"
+                category: "Marketing Automation",
               },
-              "provider": {
+              provider: {
                 "@type": "Organization",
-                "name": "Strohm Media",
-                "description": "AI-first marketing automation agency"
-              }
-            })
+                name: "Strohm Media",
+                description: "AI-first marketing automation agency",
+              },
+            }),
           }}
         />
       </head>
