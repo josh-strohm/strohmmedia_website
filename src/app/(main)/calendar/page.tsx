@@ -51,7 +51,7 @@ export default function BookingPage() {
                             {/* Google Calendar Appointment Scheduling */}
                             <div style={{ background: "#ffffff", borderRadius: "12px", overflow: "hidden", padding: "8px" }}>
                                 <iframe
-                                    src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ25F2oblKxh3C1mJNDUoiugL0QZQITgGdVZawhkNuqHdrIYiD0a0euuHv_cS0izBqcQXQlpFgqS?gv=true"
+                                    src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2lnFVDVF4oKIzE6ZHDeeyE7cLSIGsE79nUYZPvsPWxz8a6Do7nJDVXq1uwyqJVtig3pMaB3tg7?gv=true"
                                     style={{ border: 0, width: "100%", minHeight: "600px", display: "block" }}
                                     width="100%"
                                     height="600"
