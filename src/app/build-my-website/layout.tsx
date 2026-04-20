@@ -1,5 +1,14 @@
 import { Metadata } from "next";
-import { ChatWidget } from "@/components/chat-widget";
+import dynamic from "next/dynamic";
+
+// Lazy load the ChatWidget to improve initial page load time
+const ChatWidget = dynamic(
+  () => import("@/components/chat-widget").then((mod) => mod.ChatWidget),
+  {
+    loading: () => null,
+    ssr: false,
+  }
+);
 
 export const metadata: Metadata = {
     title: "Custom Website Development | Strohm Media",

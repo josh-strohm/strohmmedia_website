@@ -15,7 +15,10 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const baseUrl = "https://strohmmedia.com";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
   title: "Strohm Media | AI-Driven Marketing Automation",
   description:
     "Scale your influence with AI-driven precision. Strohm Media bridges the gap between emerging AI technologies and business growth. We automate the mundane so you can dominate the market.",
@@ -28,17 +31,19 @@ export const metadata: Metadata = {
     "Business Growth",
   ],
   authors: [{ name: "Strohm Media" }],
+  creator: "Strohm Media",
+  publisher: "Strohm Media",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://strohmmedia.com",
+    url: baseUrl,
     siteName: "Strohm Media",
     title: "Strohm Media | AI-Driven Marketing Automation",
     description:
       "Scale your influence with AI-driven precision. We automate the mundane so you can dominate the market.",
     images: [
       {
-        url: "https://strohmmedia.com/Strohm_Media_Logo.jpg",
+        url: `${baseUrl}/Strohm_Media_Logo.jpg`,
         width: 1200,
         height: 630,
         alt: "Strohm Media",
@@ -50,11 +55,24 @@ export const metadata: Metadata = {
     title: "Strohm Media | AI-Driven Marketing Automation",
     description:
       "Scale your influence with AI-driven precision. We automate the mundane so you can dominate the market.",
-    images: ["https://strohmmedia.com/Strohm_Media_Logo.jpg"],
+    images: [`${baseUrl}/Strohm_Media_Logo.jpg`],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: baseUrl,
+    languages: {
+      en: baseUrl,
+    },
   },
   icons: {
     icon: "/Strohm_Media_Logo.jpeg",
@@ -75,20 +93,55 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
+              "@type": "Organization",
               name: "Strohm Media",
-              applicationCategory: "BusinessApplication",
-              operatingSystem: "Web",
+              url: baseUrl,
+              logo: `${baseUrl}/Strohm_Media_Logo.jpg`,
               description:
                 "AI-driven marketing automation platform that bridges the gap between emerging AI technologies and business growth.",
-              offers: {
-                "@type": "Offer",
-                category: "Marketing Automation",
+              foundingDate: "2023",
+              founder: {
+                "@type": "Person",
+                name: "Josh Strohm",
               },
-              provider: {
-                "@type": "Organization",
-                name: "Strohm Media",
-                description: "AI-first marketing automation agency",
+              contactPoint: {
+                "@type": "ContactPoint",
+                email: "hi@joshstrohm.com",
+                contactType: "customer service",
+              },
+              sameAs: [
+                "https://www.linkedin.com/company/103876213",
+                "https://www.x.com/strohmmedia",
+                "https://www.facebook.com/strohmmedia",
+                "https://www.instagram.com/strohmmedia",
+                "https://www.youtube.com/@strohmmedia",
+              ],
+              serviceType: [
+                "Marketing Automation",
+                "AI Consulting",
+                "Digital Strategy",
+                "Web Development",
+              ],
+              areaServed: "Worldwide",
+              priceRange: "$$$",
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Strohm Media",
+              url: baseUrl,
+              potentialAction: {
+                "@type": "SearchAction",
+                target: {
+                  "@type": "EntryPoint",
+                  urlTemplate: `${baseUrl}/search?q={search_term_string}`,
+                },
+                "query-input": "required name=search_term_string",
               },
             }),
           }}

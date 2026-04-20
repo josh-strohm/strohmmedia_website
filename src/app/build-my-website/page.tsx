@@ -72,6 +72,7 @@ export default function BuildMyWebsitePage() {
                                     alt="Strohm Media"
                                     width={480}
                                     height={120}
+                                    sizes="(max-width: 768px) 240px, 480px"
                                     className="h-full w-full object-contain"
                                     priority
                                 />
@@ -157,6 +158,7 @@ export default function BuildMyWebsitePage() {
                                     alt="Custom Website Platform Preview"
                                     width={1200}
                                     height={675}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
                                     className="w-full h-auto object-cover"
                                     priority
                                 />

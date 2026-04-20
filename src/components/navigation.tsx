@@ -59,6 +59,7 @@ export function Navigation() {
                                 alt="Strohm Media"
                                 width={360}
                                 height={90}
+                                sizes="(max-width: 768px) 200px, 360px"
                                 className="h-full w-full object-contain"
                                 priority
                             />
