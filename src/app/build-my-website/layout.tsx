@@ -1,14 +1,5 @@
 import { Metadata } from "next";
-import dynamic from "next/dynamic";
-
-// Lazy load the ChatWidget to improve initial page load time
-const ChatWidget = dynamic(
-  () => import("@/components/chat-widget").then((mod) => mod.ChatWidget),
-  {
-    loading: () => null,
-    ssr: false,
-  }
-);
+import { ChatWidgetWrapper } from "@/components/chat-widget-wrapper";
 
 export const metadata: Metadata = {
     title: "Custom Website Development | Strohm Media",
@@ -23,7 +14,7 @@ export default function BuildMyWebsiteLayout({
     return (
         <>
             {children}
-            <ChatWidget />
+            <ChatWidgetWrapper />
         </>
     );
 }
