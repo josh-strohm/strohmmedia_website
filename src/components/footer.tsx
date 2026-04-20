@@ -9,7 +9,6 @@ const footerLinks = {
         { label: "Performance Marketing", href: "/platform#performance" },
     ],
     resources: [
-        { label: "AI Assessment", href: "/ai-assessment" },
         { label: "Influence Blog", href: "/blog" },
         { label: "Case Studies", href: "/blog#case-studies" },
         { label: "ROI Calculator", href: "/#roi-calculator" },
