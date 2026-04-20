@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { ChatWidget } from "@/components/chat-widget";
 
 export const metadata: Metadata = {
     title: "Custom Website Development | Strohm Media",
@@ -10,5 +11,10 @@ export default function BuildMyWebsiteLayout({
 }: {
     children: React.ReactNode;
 }) {
-    return <>{children}</>;
+    return (
+        <>
+            {children}
+            <ChatWidget />
+        </>
+    );
 }
