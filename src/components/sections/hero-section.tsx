@@ -106,7 +106,7 @@ export function HeroSection() {
                         className="flex flex-col items-center justify-center gap-4 sm:flex-row"
                     >
                         <MagneticButton>
-                            <Link href="/calendar">
+                            <Link href="/contact">
                                 <Button
                                     size="lg"
                                     className="shimmer group h-14 bg-gradient-to-r from-primary to-accent px-8 text-lg font-semibold"
